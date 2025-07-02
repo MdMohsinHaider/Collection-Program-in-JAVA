@@ -26,12 +26,22 @@ public class program8 {
         c1.add(true);
         c1.add(false);
         c1.add((long)123456789);
+        c1.add(4);
+        c1.add((byte) 12);
+        c1.add((byte) 34);
+        c1.add((byte) 67);
+        c1.add((byte) 127);
+        c1.add((short) 34);
 
 //        removeString(c1);
 //        removeInteger(c1);
 //        removeFloat(c1);
 //        removeDouble(c1);
-        removeLong(c1);
+//        removeLong(c1);
+//        removeBoolean(c1);
+//        removeCharacter(c1);
+//        removeByte(c1);
+        removeShort(c1);
     }
 
     private static void removeString(Collection<Object> collection){
@@ -86,6 +96,50 @@ public class program8 {
         while (itr.hasNext()){
             Object o = itr.next();
             if (o instanceof Long)
+                itr.remove();
+        }
+        System.out.println("After collection = " + collection);
+    }
+
+    private static void removeBoolean(Collection<Object> collection){
+        System.out.println("Before collection = " + collection);
+        Iterator<Object> itr = collection.iterator();
+        while (itr.hasNext()){
+            Object o= itr.next();
+            if (o instanceof Boolean)
+                itr.remove();
+        }
+        System.out.println("After collection = " + collection);
+    }
+
+    private static void removeCharacter(Collection<Object> collection){
+        System.out.println("Before collection = " + collection);
+        Iterator<Object> itr = collection.iterator();
+        while (itr.hasNext()){
+            Object o = itr.next();
+            if (o instanceof Character)
+                itr.remove();
+        }
+        System.out.println("After collection = " + collection);
+    }
+
+    private static void removeByte(Collection<Object> collection){
+        System.out.println("Before collection = " + collection);
+        Iterator<Object> itr = collection.iterator();
+        while (itr.hasNext()){
+            Object o = itr.next();
+            if (o instanceof Byte)
+                itr.remove();
+        }
+        System.out.println("After collection = " + collection);
+    }
+
+    private static void removeShort(Collection<Object> collection){
+        System.out.println("Before collection = " + collection);
+        Iterator<Object> itr = collection.iterator();
+        while (itr.hasNext()){
+            Object o = itr.next();
+            if (o instanceof Short)
                 itr.remove();
         }
         System.out.println("After collection = " + collection);
